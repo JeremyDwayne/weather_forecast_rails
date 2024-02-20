@@ -1,4 +1,8 @@
-# README
+# Weather Forecast
+
+Take home interview
+
+![demo gif](weather-forecast.gif)
 
 ## Tech Stack
 
