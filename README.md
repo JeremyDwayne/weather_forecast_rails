@@ -2,7 +2,7 @@
 
 Take home interview
 
-![demo gif](weather-forecast.gif)
+![demo gif](https://github.com/JeremyDwayne/weather_forecast_rails/blob/main/weather_forcast.gif)
 
 ## Tech Stack
 
