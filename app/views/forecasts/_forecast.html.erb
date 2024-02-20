@@ -1,0 +1,24 @@
+<h2 class="mb-0">Forecast For: <%= display_location(forecast) %></h2>
+
+<% if forecast["cached"] == true %>
+  <div class="cached-indicator flex content-center ml-0 pl-0 mt-0 mb-4">
+    <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg">
+      <circle r="5" cx="10" cy="10" stroke-width="3" class="fill-green-700"  />
+      <span class="text-sm">Cached</span>
+    </svg>
+  </div>
+<% end %>
+
+<div class="forecast-details bg-white shadow-md rounded px-8 py-4">
+  <p>
+    <span class="current-temperature text-2xl">Current Temperature: <%= current_temperature(forecast) %></span>
+  </p>
+  <p>
+    <span class="text-2xl">5 Day Forecast</span>
+    <div class="flex justify-center divide-x divide-solid">
+      <% forecast["daily"]["time"].each_with_index do |day, index| %>
+        <%= render partial: "weather_day", locals: {day: day, forecast: forecast, index: index} %>
+      <% end %>
+    </div>
+  </p>
+</div>

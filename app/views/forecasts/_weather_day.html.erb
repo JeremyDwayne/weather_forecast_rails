@@ -1,0 +1,14 @@
+
+<div class="forecast-day px-4 first:pl-0 last:pr-0">
+  <div class="date">
+    <%= formatted_date(day) %>
+  </div>
+  <div class="temperature">
+    <div class="temperature-min">
+      <b>L</b> <%= forecast_min_temperature(forecast, index) %>
+    </div>
+    <div class="temperature-max">
+      <b>H</b> <%= forecast_max_temperature(forecast, index) %>
+    </div>
+  </div>
+</div>
